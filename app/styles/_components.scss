@@ -1,0 +1,104 @@
+.box-container {
+  margin: 60px 0;
+}
+
+.label {
+  display: block;
+  margin: 5px 0;
+}
+
+.gif-video {
+  @media screen and (max-width: $small) {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+/**
+ * Forms
+ */
+
+input {
+  width: 200px;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $form-color;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid $form-border;
+  border-radius: .25rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  &:hover {
+    background-color: $primary-dark;
+    border-color: $primary-dark;
+  }
+}
+
+@media screen and (max-width: $small) {
+  input, button {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}
+
+/**
+ * Top Navigation
+ */
+
+.menu {
+  height: 4em;
+  background-color: #677ae4;
+  background-color: #05526A;
+  background-color: #e46855;
+}
+
+.menu h1 {
+  position: relative;
+  padding: 5px 0 0 8px;
+  color: #f9f9f9;
+  font-size: 1.8em;
+  font-style: italic;
+}
+
+.menu a,
+.menu .links {
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu a:hover,
+.menu a.active {
+  opacity: 1;
+}
+
+.menu .links {
+  padding: 0 21px;
+}
+
+.menu .links a {
+  position: relative;
+  bottom: 5px;
+}
+

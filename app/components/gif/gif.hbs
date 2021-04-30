@@ -1,0 +1,29 @@
+<article class="box-container">
+    <video class="gif-video" width="{{@gif.images.original_mp4.width}}" height="{{@gif.images.original_mp4.height}}" loop autoplay>
+      <source src="{{@gif.images.original.mp4}}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p>
+      <span class="label">
+        <strong>Title:</strong>
+        <i>{{@gif.title}}</i>
+      </span>
+
+      <span class="label">
+        <strong>Username:</strong>
+        <i>{{@gif.username}}</i>
+      </span>
+
+      <span class="label">
+        <strong>Rating:</strong>
+        <i>{{@gif.rating}}</i>
+      </span>
+
+      <span class="label">
+        <strong>Trending Date:</strong>
+        <i>{{@gif.trendingDateTime}}</i>
+      </span>
+
+    </p>
+</article>

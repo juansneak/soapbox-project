@@ -1,0 +1,15 @@
+{{page-title "Trending"}}
+<div class="main-wrapper">
+
+  <h1>Trending GIFS</h1>
+
+  <FormFilter
+    @limit={{this.limit}}
+    @rating={{this.rating}}
+    @offset={{this.offset}}
+    @filterAction={{updateModel}}
+  />
+
+  <Gif::GifList @gifs={{this.model}}/>
+</div>
+

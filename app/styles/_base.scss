@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Colors
+ */
+$primary: #9b2918;
+$primary-dark: #792114;
+$main-font: #212121;
+$form-color: #495057;
+$form-border: #ced4da;
+$background: #F8E7CF;
+
+/**
+ * Breakpoints
+ */
+$x-small: 300px;
+$small: 660px;
+$medium: 900px;
+
+html {
+  background-color: $background;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a {
+  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,{
+  color: $primary;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+
+
