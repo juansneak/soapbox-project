@@ -27,10 +27,15 @@ You will need the following things properly installed on your computer.
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
+## Aditional Packages Installed
+
+* ember-truth-helpers
+* ember-composable-helpers
+* ember-cli-sass
+
 ## Things to improve
 
 * Create an .env file and add the Giphy credentials there. We could use [ember-cli-dotenv](https://github.com/fivetanley/ember-cli-dotenv)
-* Add a select in the Rating filter inside the FormFilter component. We could use [ember-select](https://www.npmjs.com/package/ember-select)
 * Improve the FormFilter component so we can customize the fields. The idea is to be able to reuse the FormFilter component and add as many fields as we need.
 * Add some form validations in the FormFilter component.
 * Improve the NavBar component so we can pass as parameter the links we want to show in the navigation.

@@ -13,16 +13,26 @@ module('Integration | Component | form-filter', function(hooks) {
     this.set('limit', 1);
     this.set('rating', 'pg');
     this.set('offset', 1);
+    this.set('ratingOptions', []);
+    this.set('changeRating', () => {});
     this.set('updateModel', () => {});
 
     await render(hbs`<FormFilter
         @limit={{this.limit}}
         @rating={{this.rating}}
         @offset={{this.offset}}
+        @ratingOptions={{this.ratingOptions}}
+        @changeRating={{this.changeRating}}
         @filterAction={{this.updateModel}}
     />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.dom('input').exists({ count: 2 });
+
+    assert.dom('select').exists({ count: 1 });
+
+    assert
+      .dom('select')
+      .containsText('Rating');
 
   });
 });

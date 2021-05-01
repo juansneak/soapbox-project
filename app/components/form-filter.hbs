@@ -1,3 +1,11 @@
 <Input @value={{@limit}} placeholder="limit" {{on "keyup" @filterAction}} />
-<Input @value={{@rating}} placeholder="rating" {{on "keyup" @filterAction}}/>
+
+<select {{on "change" (pick "target.value" @changeRating) }} >
+  <option value="" disabled>Rating</option>
+  {{#each @ratingOptions as |rating|}}
+    <option selected={{if (eq @rating rating) true false}} value={{rating}}>{{rating}}</option>
+  {{/each}}
+</select>
+
 <Input @value={{@offset}} placeholder="offset" {{on "keyup" @filterAction}}/>
+

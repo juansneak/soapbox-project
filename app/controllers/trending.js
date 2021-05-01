@@ -7,6 +7,9 @@ const DEFAULT_RATING = 'g';
 const DEFAULT_OFFSET = '1';
 
 export default class TrendingController extends Controller {
+
+  ratingOptions = ['g', 'pg', 'pg-13', 'r'];
+
   @tracked
   limit = DEFAULT_LIMIT;
 
@@ -15,6 +18,12 @@ export default class TrendingController extends Controller {
 
   @tracked
   offset = DEFAULT_OFFSET;
+
+  @action
+  async changeRating(value) {
+    this.rating = value;
+    await this.updateModel();
+  }
 
   @action
   async updateModel() {
