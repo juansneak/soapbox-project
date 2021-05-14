@@ -58,6 +58,10 @@ button {
     width: 90%;
     margin-bottom: 15px;
   }
+  select {
+    width: 95%;
+    margin-bottom: 15px;
+  }
 }
 
 /**
@@ -106,3 +110,21 @@ button {
   bottom: 5px;
 }
 
+/**
+ * Lists
+ */
+ul.main-list {
+  margin: 0px 20px;
+  li {
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+}
+
+ul.hidden-list {
+  display: none;
+  margin: 20px;
+  &.show {
+    display: block;
+  }
+}

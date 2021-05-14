@@ -8,7 +8,8 @@ module.exports = function (environment) {
     locationType: 'auto',
     apiUrl: 'http://api.giphy.com',
     apiKey: '4j9fE9qkT5DzV2L7i05SbHpXQjaf8JX8',
-    apiNamespace: 'v1/gifs',
+    /*apiNamespace: 'v1/gifs',*/
+    apiNamespace: 'v1',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

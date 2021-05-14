@@ -10,6 +10,24 @@ export default class ApplicationSerializer extends JSONAPISerializer {
     };
   }
 
+  normalizeFindRecordResponse(store, primaryModelClass, payload) {
+    return {
+      data: this.serializeGifRecord(payload.data),
+    };
+  }
+
+  normalizeFindAllResponse(store, primaryModelClass, payload) {
+    let id = 1;
+    console.log(primaryModelClass); //JCMT
+    const newPayload = payload.data.map(record => {
+      id++;
+      return this.serializeFindAllRecord(record, id);
+    });
+    return {
+      data: newPayload,
+    };
+  }
+
   serializeGifRecord(record) {
     return {
       type: 'gif',
@@ -25,4 +43,17 @@ export default class ApplicationSerializer extends JSONAPISerializer {
       },
     };
   }
+
+  serializeFindAllRecord(record, id) {
+    return {
+      type: 'category',
+      id: record.id || id,
+      attributes: {
+        name: record.name,
+        name_encoded: record.name_encoded,
+        subcategories: record.subcategories,
+      },
+    };
+  }
+
 }

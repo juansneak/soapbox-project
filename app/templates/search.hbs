@@ -1,0 +1,25 @@
+{{page-title "Search"}}
+<div class="main-wrapper">
+
+  <h1>Search GIFS</h1>
+
+  <FormFilter
+    @limit={{this.limit}}
+    @rating={{this.rating}}
+    @offset={{this.offset}}
+    @ratingOptions={{this.ratingOptions}}
+    @changeRating={{this.changeRating}}
+    @filterAction={{updateModel}}
+  >
+    <Input @value={{this.query}} placeholder="search" {{on "keyup" this.updateModel}} />
+    <select {{on "change" (pick "target.value" this.changeLang) }} >
+      <option value="" disabled>Language</option>
+      {{#each this.langOptions as |lang|}}
+        <option selected={{if (eq this.lang lang.value) true false}} value={{lang.value}}>{{lang.name}}</option>
+      {{/each}}
+    </select>
+
+  </FormFilter>
+
+  <Gif::GifList @gifs={{this.model}}/>
+</div>

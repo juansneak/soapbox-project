@@ -1,0 +1,8 @@
+{{page-title "Categories"}}
+<div class="main-wrapper">
+  <h1>Categories</h1>
+</div>
+<Category::List @categories={{model}} @findGifs={{this.findGifs}}/>
+<div class="main-wrapper">
+  <Gif::GifList @gifs={{this.gifs}}/>
+</div>

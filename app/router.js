@@ -8,4 +8,7 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   this.route('trending', { path: '/gif/trending' });
+  this.route('detail', { path: '/gif/:id' });
+  this.route('search', { path: '/gif/search' });
+  this.route('categories', { path: '/gif/categories' });
 });

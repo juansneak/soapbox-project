@@ -6,10 +6,22 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
   namespace = ENV.apiNamespace;
 
   urlForQuery({ type }, modelName) {
-    if (modelName == 'gif' && type == 'trending') {
-      return `${this.host}/${this.namespace}/trending?api_key=${ENV.apiKey}`;
+    if (modelName == 'gif') {
+      return `${this.host}/${this.namespace}/gifs/${type}?api_key=${ENV.apiKey}`;
     } else {
       return super.urlForQuery(...arguments);
+    }
+  }
+
+  urlForFindRecord() {
+    return `${super.urlForFindRecord(...arguments)}?api_key=${ENV.apiKey}`;
+  }
+
+  urlForFindAll(modelName) {
+    if (modelName == 'category') {
+      return `${this.host}/${this.namespace}/gifs/categories?api_key=${ENV.apiKey}`;
+    } else {
+      return super.urlForFindAll(...arguments);
     }
   }
 }

@@ -1,7 +1,11 @@
 <ul class="gif-list">
-  {{#each @gifs as |gif|}}
-    <li>
-      <Gif::Gif @gif={{gif}}/>
-    </li>
-  {{/each}}
+  {{#if (is-empty @gifs) }}
+    <br><li>No records found</li>
+  {{else}}
+    {{#each @gifs as |gif|}}
+      <li>
+        <Gif::Gif @gif={{gif}}/>
+      </li>
+    {{/each}}
+  {{/if}}
 </ul>

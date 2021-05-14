@@ -1,0 +1,45 @@
+<article class="box-container">
+
+  <h2>{{@gif.title}}</h2>
+
+  <LinkTo @route="detail" @model={{@gif.id}}>
+    <video class="gif-video" width="{{@gif.images.original_mp4.width}}" height="{{@gif.images.original_mp4.height}}" loop autoplay>
+      <source src="{{@gif.images.original.mp4}}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </LinkTo>
+
+  <p>
+
+    <span class="label">
+      <strong>Title:</strong>
+      <i>{{@gif.title}}</i>
+    </span>
+
+    <span class="label">
+      <strong>Username:</strong>
+      <i>{{@gif.username}}</i>
+    </span>
+
+    <span class="label">
+      <strong>Rating:</strong>
+      <i>{{@gif.rating}}</i>
+    </span>
+
+    <span class="label">
+      <strong>Trending Date:</strong>
+      <i>{{@gif.trendingDateTime}}</i>
+    </span>
+
+    <span class="label">
+      <strong>Embed URL:</strong>
+      <a href="{{@gif.embed_url}}" target="_blank"><i>{{@gif.embed_url}}</i></a>
+    </span>
+
+    <span class="label">
+      <strong>Slug:</strong>
+      <i>{{@gif.slug}}</i>
+    </span>
+
+  </p>
+</article>

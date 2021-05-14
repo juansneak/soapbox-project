@@ -1,0 +1,11 @@
+<ul class="main-list">
+  {{#each @categories as |category| }}
+    <li><button {{on "click" this.toggleSubcategories}}>{{category.name}}</button>
+      <ul class="hidden-list">
+        {{#each category.subcategories as |subcategory| }}
+          <li><button {{on "click" (fn @findGifs subcategory.name)}}>{{subcategory.name}}</button></li>
+        {{/each}}
+      </ul>
+    </li>
+  {{/each}}
+</ul>
